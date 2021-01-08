@@ -11,7 +11,8 @@ export const app = express();
 app.use(cors({ origin: true }));
 app.use(express.json());
 
-app.use("/user", userRouter);
+
+        app.use("/user", userRouter);
 
 export default app;
 

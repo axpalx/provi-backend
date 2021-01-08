@@ -1,0 +1,59 @@
+CREATE TABLE IF NOT EXISTS User(
+	id VARCHAR(255) PRIMARY KEY,
+	email VARCHAR(255) NOT NULL,
+	password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Usercpf (
+	id VARCHAR(255) NOT NULL, 
+	cpf VARCHAR(255) NOT NULL,
+  updatedat VARCHAR(255) NOT NULL,
+  user_id VARCHAR(255),
+  FOREIGN KEY (user_id) REFERENCES User(id)
+);
+
+CREATE TABLE IF NOT EXISTS Username (
+	id VARCHAR(255) NOT NULL,
+	firstname VARCHAR(255) NOT NULL,
+  lastname VARCHAR(255) NOT NULL,
+  updatedat VARCHAR(255) NOT NULL,
+  user_id VARCHAR(255),
+  FOREIGN KEY (user_id) REFERENCES User(id)
+);
+
+CREATE TABLE IF NOT EXISTS Useraddress (
+	id VARCHAR(255) NOT NULL,
+	cep VARCHAR(255) NOT NULL,
+  street VARCHAR(255) NOT NULL,
+  housenumber INT NOT NULL,
+  complement VARCHAR(255) NOT NULL,
+  city VARCHAR(255) NOT NULL,
+  state VARCHAR(255) NOT NULL,
+  updatedat VARCHAR(255) NOT NULL,
+  user_id VARCHAR(255),
+  FOREIGN KEY (user_id) REFERENCES User(id)
+);
+
+CREATE TABLE IF NOT EXISTS Userdatebirth (
+  id VARCHAR(255) NOT NULL,
+	datebirth VARCHAR(255) NOT NULL,
+  updatedat VARCHAR(255) NOT NULL,
+  user_id VARCHAR(255),
+  FOREIGN KEY (user_id) REFERENCES User(id)
+);
+
+CREATE TABLE IF NOT EXISTS Userphonenumber (
+  id VARCHAR(255) NOT NULL,
+	phonenumber BIGINT NOT NULL,
+  updatedat VARCHAR(255) NOT NULL,
+  user_id VARCHAR(255),
+  FOREIGN KEY (user_id) REFERENCES User(id)
+);
+
+CREATE TABLE IF NOT EXISTS Userorderedquantity (
+  id VARCHAR(255) NOT NULL,
+	orderedquantity DECIMAL(10,2) NOT NULL,
+  updatedat VARCHAR(255) NOT NULL,
+  user_id VARCHAR(255),
+  FOREIGN KEY (user_id) REFERENCES User(id)
+);
