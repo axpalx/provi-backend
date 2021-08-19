@@ -30,7 +30,7 @@ O servidor inciará na porta:3003 - acesse <http://localhost:3003>
 
 - https://documenter.getpostman.com/view/11226752/TVzPmy7P
 
-## 🔧 Tecnologias utilizada
+## 🔧 Tecnologias utilizadas
 
 - Axios;
 - Bcryptjs;
